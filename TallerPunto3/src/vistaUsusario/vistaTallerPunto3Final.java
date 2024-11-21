@@ -229,7 +229,6 @@ public class vistaTallerPunto3Final {
             sw = scan.next().toUpperCase().charAt(0);
         } while (sw == 'S');
 
-        //apartir de aca se crean las funcionalidades
     }
 
     public static void consultarPuntoFabrica() {
