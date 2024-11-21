@@ -2,6 +2,7 @@ package controlador;
 
 import modelo.TiendaCentroComercial;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
 
@@ -23,7 +24,7 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
                         objtTiendaCentroComercial.setDiteccion(objTiendaCentroComercial.getDiteccion());
                         objtTiendaCentroComercial.setTelefono(objTiendaCentroComercial.getTelefono());
                         objtTiendaCentroComercial.setArea(objTiendaCentroComercial.getArea());
-                        objtTiendaCentroComercial.setPresupuestoVentas(objTiendaCentroComercial.getPresupuestoVentas());
+                        objtTiendaCentroComercial.setLineaRopa(objTiendaCentroComercial.getLineaRopa());
                         break;
                     }
                 }
@@ -46,7 +47,6 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
                         + this.listTiendaCentroComercial.get(i).getAdministrador()+ " - "
                         + this.listTiendaCentroComercial.get(i).getNumeroEmpleados() + " - "
                         + this.listTiendaCentroComercial.get(i).getLineaRopa() + " - "
-                        + this.listTiendaCentroComercial.get(i).getCantidadVendida() + " - "
                         + this.listTiendaCentroComercial.get(i).getPresupuestoVentas();
 
                 break;
@@ -88,7 +88,6 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
                     + this.listTiendaCentroComercial.get(i).getTelefono()+ " - "
                     + this.listTiendaCentroComercial.get(i).getArea()+ " - "
                     + this.listTiendaCentroComercial.get(i).getLineaRopa() + " - "
-                    + this.listTiendaCentroComercial.get(i).getCantidadVendida() + " - "
                     + this.listTiendaCentroComercial.get(i).getPresupuestoVentas() + " \n ";
         }
         return lisTiendaCentroComercial;

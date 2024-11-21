@@ -4,7 +4,6 @@ public class TiendaCentroComercial extends PuntoVenta {
     private String administrador;
     private String numeroEmpleados;
     private String lineaRopa ;
-    private String cantidadVendida;
 
     public String getAdministrador() {
         return administrador;
@@ -42,24 +41,15 @@ public class TiendaCentroComercial extends PuntoVenta {
 
 
 
-    public String getCantidadVendida() {
-        return cantidadVendida;
-    }
-
-
-
-    public void setCantidadVendida(String cantidadVendida) {
-        this.cantidadVendida = cantidadVendida;
-    }
-
-
-
     public TiendaCentroComercial(String codigo, String diteccion, String telefono, String area,
-    String presupuestoVentas, String administrador, String numeroEmpleados) {
+            String presupuestoVentas, String administrador, String numeroEmpleados, String lineaRopa) {
         super(codigo, diteccion, telefono, area, presupuestoVentas);
         this.administrador = administrador;
         this.numeroEmpleados = numeroEmpleados;
+        this.lineaRopa = lineaRopa;
     }
+
+    
 
     
 }
