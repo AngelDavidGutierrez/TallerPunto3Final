@@ -1,1 +1,3 @@
-# TallerPunto3Final
+# TallerPunto3Final 
+Ángel David Gutierrez Ladino,
+Miguel Angel Cuadros Gallego
