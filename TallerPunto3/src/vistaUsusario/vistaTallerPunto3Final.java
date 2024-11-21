@@ -36,6 +36,8 @@ public class vistaTallerPunto3Final {
         registrarAlmacenCadena();
         consultarAlmacenCadena();
         actualizarAlmacenCadena();
+        eliminarAlmacenCadena();
+        listaAlmacenCadena();
     }
 
     // apartir de aca se crean las funcionalidades
