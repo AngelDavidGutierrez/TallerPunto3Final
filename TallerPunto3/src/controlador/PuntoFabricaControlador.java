@@ -4,7 +4,7 @@ package controlador;
 import java.util.ArrayList;
 import modelo.PuntoFabrica;
 
-abstract class PuntoFabricaController extends PuntoDeVentaControlador {
+public class PuntoFabricaControlador extends PuntoDeVentaControlador {
     
     private final ArrayList <PuntoFabrica> listPuntoFabrica = new ArrayList<>();
 

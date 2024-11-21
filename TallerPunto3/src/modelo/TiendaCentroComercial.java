@@ -41,13 +41,17 @@ public class TiendaCentroComercial extends PuntoVenta {
 
 
 
-    public TiendaCentroComercial(String codigo, String diteccion, String telefono, String area,
+    public TiendaCentroComercial(String codigo, String diteccion, String telefono, int area,
             String presupuestoVentas, String administrador, String numeroEmpleados, String lineaRopa) {
         super(codigo, diteccion, telefono, area, presupuestoVentas);
         this.administrador = administrador;
         this.numeroEmpleados = numeroEmpleados;
         this.lineaRopa = lineaRopa;
     }
+
+
+
+    
 
     
 

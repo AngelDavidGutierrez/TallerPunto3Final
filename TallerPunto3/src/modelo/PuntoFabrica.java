@@ -16,7 +16,7 @@ public class PuntoFabrica extends PuntoVenta {
     public void setNumeroEmpleados(String numeroEmpleados) {
         this.numeroEmpleados = numeroEmpleados;
     }
-    public PuntoFabrica(String codigo, String diteccion, String telefono, String area, String presupuestoVentas,
+    public PuntoFabrica(String codigo, String diteccion, String telefono, int area, String presupuestoVentas,
             String administrador, String numeroEmpleados) {
         super(codigo, diteccion, telefono, area, presupuestoVentas);
         this.administrador = administrador;

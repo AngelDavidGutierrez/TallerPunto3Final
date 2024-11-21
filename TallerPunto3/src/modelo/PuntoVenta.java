@@ -4,7 +4,7 @@ abstract class PuntoVenta {
     protected String codigo;
     protected String diteccion;
     protected String telefono;
-    protected String area;
+    protected int area;
     protected String presupuestoVentas;
     public String getCodigo() {
         return codigo;
@@ -24,10 +24,10 @@ abstract class PuntoVenta {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    public String getArea() {
+    public int getArea() {
         return area;
     }
-    public void setArea(String area) {
+    public void setArea(int area) {
         this.area = area;
     }
     public String getPresupuestoVentas() {
@@ -36,7 +36,7 @@ abstract class PuntoVenta {
     public void setPresupuestoVentas(String presupuestoVentas) {
         this.presupuestoVentas = presupuestoVentas;
     }
-    protected PuntoVenta(String codigo, String diteccion, String telefono, String area, String presupuestoVentas) {
+    protected PuntoVenta(String codigo, String diteccion, String telefono, int area, String presupuestoVentas) {
         this.codigo = codigo;
         this.diteccion = diteccion;
         this.telefono = telefono;

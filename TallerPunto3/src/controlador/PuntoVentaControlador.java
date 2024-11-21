@@ -15,7 +15,7 @@ abstract class PuntoDeVentaControlador {
     public String presupuesto(int area){
 
         String result;
-        if (area>=4) {
+        if (area >= 4) {
             result = "8000000";
         }else{
             result = "5000000";

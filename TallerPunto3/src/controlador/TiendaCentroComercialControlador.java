@@ -9,7 +9,7 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
     private final ArrayList <TiendaCentroComercial> listTiendaCentroComercial = new ArrayList<>();
 
     @Override
-    <T> boolean actualizar(String codigo, T obj) {
+    public <T> boolean actualizar(String codigo, T obj) {
         boolean result = true;
         try {
             if (obj == null) {
@@ -36,7 +36,7 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
     }
 
     @Override
-    String consultar(String codigo) {
+    public String consultar(String codigo) {
         String result = "";
 
         for (int i = 0; i < this.listTiendaCentroComercial.size(); i++) {
@@ -56,7 +56,7 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
     }
 
     @Override
-    boolean eliminar(String codigo) {
+    public boolean eliminar(String codigo) {
        boolean result = true;
         try {
             if (codigo == null) {
@@ -77,7 +77,7 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
     }
 
     @Override
-    String listar() {
+    public String listar() {
         String lisTiendaCentroComercial = "";
 
         for (int i = 0; i < this.listTiendaCentroComercial.size(); i++) {
@@ -94,7 +94,7 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
     }
 
     @Override
-    <T> boolean registrar(T obj) {
+    public <T> boolean registrar(T obj) {
         try {
             if (obj =="") {
                 return false;
