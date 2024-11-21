@@ -15,6 +15,7 @@ public class vistaTallerPunto3Final {
     private static Scanner scan = new Scanner(System.in);
     private static TiendaCentroComercialControlador objTiendaCentroComercialcControlador = new TiendaCentroComercialControlador();
     private static PuntoFabricaControlador objPuntoFabricaControlador = new PuntoFabricaControlador();
+    private static AlmacenCadenaControlador objAlmacenCadenaControlador = new AlmacenCadenaControlador();
 
     public static void main(String[] args) {
         // aqui se llaman las funciones
@@ -31,6 +32,10 @@ public class vistaTallerPunto3Final {
         actualizarPuntoFabrica();
         eliminarPuntoFabrica();
         listaPuntoFabrica();
+        // Almacen Cadena
+        registrarAlmacenCadena();
+        consultarAlmacenCadena();
+        actualizarAlmacenCadena();
     }
 
     // apartir de aca se crean las funcionalidades
@@ -349,5 +354,153 @@ public class vistaTallerPunto3Final {
             System.out.println("No has registrado ningun Punto Fabrica.");
         }
     
-    } 
+    }
+    // Funciones Almacen Cadena
+    public static void registrarAlmacenCadena() {
+        char sw;
+        do {
+            System.out.println("\n Ingrese el codigo: ");
+            String codigo = scan.next();
+            System.out.println("Ingrese la direccion: ");
+            String direccion = scan.next();
+            System.out.println("Ingrese el numero de telefono: ");
+            String telefono = scan.next();
+            System.out.println("ingrese el area: ");
+            int area = scan.nextInt();
+            String presupuesto = objAlmacenCadenaControlador.presupuesto(area);
+           
+
+            AlmacenCadena objAlmacenCadena = new AlmacenCadena(codigo, direccion, telefono, area, presupuesto);
+
+            Generic<AlmacenCadena> objGeneric = new Generic<>();
+            objGeneric.setContent(objAlmacenCadena);
+
+            if (objAlmacenCadenaControlador.registrar(objGeneric.getContent())) {
+                System.out.println("El Almacen Cadena se registro correctamente.");
+            } else {
+                System.out.println("El Almacen Cadena no se pudo registrar.");
+            }
+            System.out.println("Desea registrar otro Almacen de Cadena?");
+            sw = scan.next().toUpperCase().charAt(0);
+        } while (sw == 'S');
+
+        //apartir de aca se crean las funcionalidades
+    }
+
+    public static void consultarAlmacenCadena() {
+        char sw;
+        do {
+            System.out.println("Ingrese el Almacen Cadena que desea consultar: ");
+            System.out.println("Ingrese Codido del Almacen Cadena: ");
+            String codigo = scan.nextLine();
+            String resultado = objAlmacenCadenaControlador.consultar(codigo);
+            if (resultado != "") {
+                System.out.println("Datos del Almacen Cadena");
+                System.out.println(resultado);
+            } else {
+                System.out.println("El Almacen Cadena no se encontro.");
+            }
+            System.out.println("Desea consultar otro Almacen Cadena?");
+            sw = scan.next().toUpperCase().charAt(0);
+        } while (sw == 'S');
+    }
+
+    public static void actualizarAlmacenCadena() {
+        char sw;
+
+        do {
+            System.out.println("Actualizar Almacen Cadena");
+            System.out.println("Ingrese el codigo del Almacen Cadena que desea actualizar:");
+            String codigoActualizar = scan.nextLine();
+
+            if (codigoActualizar != "") {
+                String resultado = objAlmacenCadenaControlador.consultar(codigoActualizar);
+                System.out.println("Datos del Almacen Cadena");
+                System.out.println(resultado);
+
+                System.out.println("Desea actualizar el Almacen Cadena?");
+
+                sw = scan.next().toUpperCase().charAt(0);
+
+                if (sw == 'S') {
+                    System.out.println("\n Ingrese el codigo: ");
+                    String codigo = scan.next();
+                    System.out.println("Ingrese la direccion: ");
+                    String direccion = scan.next();
+                    System.out.println("Ingrese el numero de telefono: ");
+                    String telefono = scan.next();
+                    System.out.println("ingrese el area: ");
+                    int area = scan.nextInt();
+                    String presupuesto = objAlmacenCadenaControlador.presupuesto(area);
+                    
+
+                    AlmacenCadena objAlmacenCadena = new AlmacenCadena(codigo, direccion, telefono, area, presupuesto);
+
+                    Generic<AlmacenCadena> objGeneric = new Generic<>();
+                    objGeneric.setContent(objAlmacenCadena);
+
+                    if (objAlmacenCadenaControlador.registrar(objGeneric.getContent())) {
+                        System.out.println("El Almacen Cadena se Actualizo correctamente.");
+                    } else {
+                        System.out.println("El Almacen Cadena no se actualizo.");
+                    }
+                } else {
+                    System.out.println("El Almacen Cadena no se actualizo.");
+                }
+            } else {
+                System.out.println("No se encontro el Almacen Cadena.");
+            }
+            System.out.println("Desea actualizar otro Almacen Cadena?");
+            sw = scan.next().toUpperCase().charAt(0);
+        } while (sw == 'S');
+    }
+
+    public static void eliminarAlmacenCadena() {
+        char sw;
+
+        do {
+            System.out.println("Eliminar Almacen Cadena");
+            System.out.println("Ingrese el codigo del Almacen Cadena que desea eliminar:");
+            String codigoEliminar = scan.nextLine();
+
+            if (codigoEliminar != "") {
+                String resultado = objAlmacenCadenaControlador.consultar(codigoEliminar);
+                System.out.println("Datos del Almacen Cadena");
+                System.out.println(resultado);
+
+                System.out.println("Desea Eliminar el Almacen Cadena?");
+
+                sw = scan.next().toUpperCase().charAt(0);
+
+                if (sw == 'S') {
+
+                    if (objAlmacenCadenaControlador.eliminar(codigoEliminar)) {
+                        System.out.println("El Almacen Cadena se Elimino correctamente.");
+                    } else {
+                        System.out.println("El Almacen Cadena no se Elimino.");
+                    }
+                } else {
+                    System.out.println("El Almacen Cadena no se Elimino.");
+                }
+            } else {
+                System.out.println("No se encontro el Almacen Cadena.");
+            }
+            System.out.println("Desea Eliminar otro Almacen Cadena?");
+            sw = scan.next().toUpperCase().charAt(0);
+        } while (sw == 'S');
+
+}
+    
+    public static void listaAlmacenCadena(){
+        System.out.println("Lista de Almacen Cadena.");
+       
+        String resultado = objAlmacenCadenaControlador.listar();
+    
+        if (resultado != ""){
+            System.out.println(resultado);
+        }else{
+            System.out.println("No has registrado ningun Almacen Cadena.");
+        }
+    
+    }
 }
