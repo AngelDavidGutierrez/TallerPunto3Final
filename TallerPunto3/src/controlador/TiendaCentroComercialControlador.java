@@ -41,14 +41,14 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
 
         for (int i = 0; i < this.listTiendaCentroComercial.size(); i++) {
             if (this.listTiendaCentroComercial.get(i).getCodigo().equals(codigo)) {
-                result = this.listTiendaCentroComercial.get(i).getCodigo()+ " - "
-                        + this.listTiendaCentroComercial.get(i).getDiteccion()+ " - "
-                        + this.listTiendaCentroComercial.get(i).getTelefono() + " - "
-                        + this.listTiendaCentroComercial.get(i).getArea()+ " - "
-                        + this.listTiendaCentroComercial.get(i).getAdministrador()+ " - "
-                        + this.listTiendaCentroComercial.get(i).getNumeroEmpleados() + " - "
-                        + this.listTiendaCentroComercial.get(i).getLineaRopa() + " - "
-                        + this.listTiendaCentroComercial.get(i).getPresupuestoVentas();
+                result = "Codigo: " + this.listTiendaCentroComercial.get(i).getCodigo()+ " - "
+                        + "Direccion: "+this.listTiendaCentroComercial.get(i).getDiteccion()+ " - "
+                        + "Telefono: " + this.listTiendaCentroComercial.get(i).getTelefono()+ " - "
+                        + "Area: " + this.listTiendaCentroComercial.get(i).getArea()+ " - "
+                        + "Administrador: "+this.listTiendaCentroComercial.get(i).getAdministrador()+ " - "
+                        + "Empleados: " + this.listTiendaCentroComercial.get(i).getNumeroEmpleados()+ " - "
+                        + "Linea de ropa mas vendida: " + this.listTiendaCentroComercial.get(i).getLineaRopa()+ " - "
+                        + "Presupuesto de venta: " + this.listTiendaCentroComercial.get(i).getPresupuestoVentas()+ "\n";
 
                 break;
             }
@@ -83,14 +83,14 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
 
         for (int i = 0; i < this.listTiendaCentroComercial.size(); i++) {
             
-            lisTiendaCentroComercial += this.listTiendaCentroComercial.get(i).getCodigo()+ " - "
-                    + this.listTiendaCentroComercial.get(i).getAdministrador()+ " - "
-                    + this.listTiendaCentroComercial.get(i).getNumeroEmpleados() + " - "
-                    + this.listTiendaCentroComercial.get(i).getDiteccion() + " - "
-                    + this.listTiendaCentroComercial.get(i).getTelefono()+ " - "
-                    + this.listTiendaCentroComercial.get(i).getArea()+ " - "
-                    + this.listTiendaCentroComercial.get(i).getLineaRopa() + " - "
-                    + this.listTiendaCentroComercial.get(i).getPresupuestoVentas() + " \n ";
+            lisTiendaCentroComercial += "Codigo: "+this.listTiendaCentroComercial.get(i).getCodigo()+ " - "
+                    + "Administrador: " + this.listTiendaCentroComercial.get(i).getAdministrador()+ " - "
+                    + "Empleados: " + this.listTiendaCentroComercial.get(i).getNumeroEmpleados()+ " - "
+                    + "Direccion: " + this.listTiendaCentroComercial.get(i).getDiteccion()+ " - "
+                    + "Telefono:" + this.listTiendaCentroComercial.get(i).getTelefono()+ " - "
+                    + "Area: " + this.listTiendaCentroComercial.get(i).getArea()+ " - "
+                    + "Linea de ropa mas vendida: " + this.listTiendaCentroComercial.get(i).getLineaRopa()+ " - "
+                    + "Presupuesto de venta: " + this.listTiendaCentroComercial.get(i).getPresupuestoVentas()+ "\n";
         }
         return lisTiendaCentroComercial;
     }
@@ -115,3 +115,4 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
 
    
 }
+
