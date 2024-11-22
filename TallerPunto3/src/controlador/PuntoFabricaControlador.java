@@ -14,7 +14,8 @@ public class PuntoFabricaControlador extends PuntoDeVentaControlador {
 
         for (int i = 0; i < this.listPuntoFabrica.size(); i++) {
             
-            lisPuntoFabrica += this.listPuntoFabrica.get(i).getAdministrador()+ " - "
+            lisPuntoFabrica += this.listPuntoFabrica.get(i).getCodigo()+ " - "
+                    + this.listPuntoFabrica.get(i).getAdministrador()+ " - "
                     + this.listPuntoFabrica.get(i).getNumeroEmpleados() + " - "
                     + this.listPuntoFabrica.get(i).getDiteccion() + " - "
                     + this.listPuntoFabrica.get(i).getTelefono()+ " - "
@@ -76,7 +77,8 @@ public class PuntoFabricaControlador extends PuntoDeVentaControlador {
 
         for (int i = 0; i < this.listPuntoFabrica.size(); i++) {
             if (this.listPuntoFabrica.get(i).getCodigo().equals(codigo)) {
-                result = this.listPuntoFabrica.get(i).getDiteccion()+ " - "
+                result = this.listPuntoFabrica.get(i).getCodigo()+ " - "
+                        + this.listPuntoFabrica.get(i).getDiteccion()+ " - "
                         + this.listPuntoFabrica.get(i).getTelefono() + " - "
                         + this.listPuntoFabrica.get(i).getArea()+ " - "
                         + this.listPuntoFabrica.get(i).getAdministrador()+ " - "

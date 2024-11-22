@@ -41,7 +41,8 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
 
         for (int i = 0; i < this.listTiendaCentroComercial.size(); i++) {
             if (this.listTiendaCentroComercial.get(i).getCodigo().equals(codigo)) {
-                result = this.listTiendaCentroComercial.get(i).getDiteccion()+ " - "
+                result = this.listTiendaCentroComercial.get(i).getCodigo()+ " - "
+                        + this.listTiendaCentroComercial.get(i).getDiteccion()+ " - "
                         + this.listTiendaCentroComercial.get(i).getTelefono() + " - "
                         + this.listTiendaCentroComercial.get(i).getArea()+ " - "
                         + this.listTiendaCentroComercial.get(i).getAdministrador()+ " - "
@@ -82,7 +83,8 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
 
         for (int i = 0; i < this.listTiendaCentroComercial.size(); i++) {
             
-            lisTiendaCentroComercial += this.listTiendaCentroComercial.get(i).getAdministrador()+ " - "
+            lisTiendaCentroComercial += this.listTiendaCentroComercial.get(i).getCodigo()+ " - "
+                    + this.listTiendaCentroComercial.get(i).getAdministrador()+ " - "
                     + this.listTiendaCentroComercial.get(i).getNumeroEmpleados() + " - "
                     + this.listTiendaCentroComercial.get(i).getDiteccion() + " - "
                     + this.listTiendaCentroComercial.get(i).getTelefono()+ " - "
