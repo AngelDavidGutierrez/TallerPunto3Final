@@ -14,13 +14,13 @@ public class PuntoFabricaControlador extends PuntoDeVentaControlador {
 
         for (int i = 0; i < this.listPuntoFabrica.size(); i++) {
             
-            lisPuntoFabrica += this.listPuntoFabrica.get(i).getCodigo()+ " - "
-                    + this.listPuntoFabrica.get(i).getAdministrador()+ " - "
-                    + this.listPuntoFabrica.get(i).getNumeroEmpleados() + " - "
-                    + this.listPuntoFabrica.get(i).getDiteccion() + " - "
-                    + this.listPuntoFabrica.get(i).getTelefono()+ " - "
-                    + this.listPuntoFabrica.get(i).getArea()+ " - "
-                    + this.listPuntoFabrica.get(i).getPresupuestoVentas() + " \n ";
+            lisPuntoFabrica += "Codigo: " + this.listPuntoFabrica.get(i).getCodigo()+ " - "
+                    + "Administrador: " + this.listPuntoFabrica.get(i).getAdministrador()+ " - "
+                    + "Empleados: " + this.listPuntoFabrica.get(i).getNumeroEmpleados()+ " - "
+                    + "Direccion: " + this.listPuntoFabrica.get(i).getDiteccion()+ " - "
+                    + "Telefono: "+this.listPuntoFabrica.get(i).getTelefono()+ " - "
+                    + "Area: " + this.listPuntoFabrica.get(i).getArea()+ " - "
+                    + "Presupuesto de venta: " + this.listPuntoFabrica.get(i).getPresupuestoVentas()+ "\n";
         }
         return lisPuntoFabrica;
    }
@@ -77,13 +77,13 @@ public class PuntoFabricaControlador extends PuntoDeVentaControlador {
 
         for (int i = 0; i < this.listPuntoFabrica.size(); i++) {
             if (this.listPuntoFabrica.get(i).getCodigo().equals(codigo)) {
-                result = this.listPuntoFabrica.get(i).getCodigo()+ " - "
-                        + this.listPuntoFabrica.get(i).getDiteccion()+ " - "
-                        + this.listPuntoFabrica.get(i).getTelefono() + " - "
-                        + this.listPuntoFabrica.get(i).getArea()+ " - "
-                        + this.listPuntoFabrica.get(i).getAdministrador()+ " - "
-                        + this.listPuntoFabrica.get(i).getNumeroEmpleados() + " - "
-                        + this.listPuntoFabrica.get(i).getPresupuestoVentas();
+                result = "Codigo: " + this.listPuntoFabrica.get(i).getCodigo()+ " - "
+                        + "Direccion: " + this.listPuntoFabrica.get(i).getDiteccion()+ " - "
+                        + "Telefono: " + this.listPuntoFabrica.get(i).getTelefono()+ " - "
+                        + "Area: "+this.listPuntoFabrica.get(i).getArea()+ " - "
+                        + "Administrador: " + this.listPuntoFabrica.get(i).getAdministrador()+ " - "
+                        + "Empleados: "+this.listPuntoFabrica.get(i).getNumeroEmpleados()+ " - "
+                        + "Presupuesto de venta: " + this.listPuntoFabrica.get(i).getPresupuestoVentas()+ "\n";
 
                 break;
             }
