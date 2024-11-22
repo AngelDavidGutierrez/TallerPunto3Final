@@ -2,7 +2,6 @@ package controlador;
 
 import modelo.TiendaCentroComercial;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
 

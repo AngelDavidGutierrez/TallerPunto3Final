@@ -10,7 +10,7 @@ import controlador.PuntoFabricaControlador;
 import dto_generico.Generic;
 import java.util.Scanner;
 
-public class vistaTallerPunto3Final {
+public class VistaTallerPunto3Final {
 
     private static Scanner scan = new Scanner(System.in);
     private static TiendaCentroComercialControlador objTiendaCentroComercialcControlador = new TiendaCentroComercialControlador();
@@ -118,9 +118,6 @@ public class vistaTallerPunto3Final {
                     sw = scan.nextLine().toUpperCase().charAt(0);
 
                     if (sw == 'S') {
-                        System.out.println("Ingrese la dirección");
-                        System.out.println("Ingrese codigo");
-                        String codigo = scan.nextLine();
                         System.out.println("Ingrese la direccion");
                         String direccion = scan.nextLine();
                         System.out.println("Ingrese el telefono");
