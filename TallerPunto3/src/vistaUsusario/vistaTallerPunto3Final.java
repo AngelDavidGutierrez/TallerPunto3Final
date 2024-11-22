@@ -118,8 +118,6 @@ public class vistaTallerPunto3Final {
                     sw = scan.nextLine().toUpperCase().charAt(0);
 
                     if (sw == 'S') {
-                        System.out.println("Ingrese codigo");
-                        String codigo = scan.nextLine();
                         System.out.println("Ingrese la dirección");
                         String direccion = scan.nextLine();
                         System.out.println("Ingre el telefono");
@@ -134,7 +132,7 @@ public class vistaTallerPunto3Final {
                         System.out.println("Ingrese la linea de ropoa con mas ventas ");
                         String lienaRopa = scan.nextLine();
 
-                        TiendaCentroComercial objTiendaCentroComercial = new TiendaCentroComercial(codigo, direccion,
+                        TiendaCentroComercial objTiendaCentroComercial = new TiendaCentroComercial(codigoActualizar, direccion,
                                 telefono, area, presupuesto, administrador, numeroEmpleados, lienaRopa);
 
                         Generic<TiendaCentroComercial> objGeneric = new Generic<>();
@@ -289,8 +287,6 @@ public class vistaTallerPunto3Final {
                     sw = scan.nextLine().toUpperCase().charAt(0);
 
                     if (sw == 'S') {
-                        System.out.println("\n Ingrese el codigo: ");
-                        String codigo = scan.nextLine();
                         System.out.println("Ingrese la direccion: ");
                         String direccion = scan.nextLine();
                         System.out.println("Ingrese el numero de telefono: ");
@@ -303,7 +299,7 @@ public class vistaTallerPunto3Final {
                         System.out.println("Ingrese el numero de Empleados: ");
                         String empleados = scan.nextLine();
 
-                        PuntoFabrica objPuntoFabrica = new PuntoFabrica(codigo, direccion, telefono, area, presupuesto,
+                        PuntoFabrica objPuntoFabrica = new PuntoFabrica(codigoActualizar, direccion, telefono, area, presupuesto,
                                 administrador, empleados);
 
                         Generic<PuntoFabrica> objGeneric = new Generic<>();
@@ -453,8 +449,6 @@ public class vistaTallerPunto3Final {
                     sw = scan.nextLine().toUpperCase().charAt(0);
 
                     if (sw == 'S') {
-                        System.out.println("\n Ingrese el codigo: ");
-                        String codigo = scan.nextLine();
                         System.out.println("Ingrese la direccion: ");
                         String direccion = scan.nextLine();
                         System.out.println("Ingrese el numero de telefono: ");
@@ -463,7 +457,7 @@ public class vistaTallerPunto3Final {
                         int area = scan.nextInt();scan.nextLine();
                         String presupuesto = objAlmacenCadenaControlador.presupuesto(area);
 
-                        AlmacenCadena objAlmacenCadena = new AlmacenCadena(codigo, direccion, telefono, area,
+                        AlmacenCadena objAlmacenCadena = new AlmacenCadena(codigoActualizar, direccion, telefono, area,
                                 presupuesto);
 
                         Generic<AlmacenCadena> objGeneric = new Generic<>();
