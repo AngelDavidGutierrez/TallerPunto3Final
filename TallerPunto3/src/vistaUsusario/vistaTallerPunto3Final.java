@@ -140,8 +140,7 @@ public class vistaTallerPunto3Final {
                         Generic<TiendaCentroComercial> objGeneric = new Generic<>();
                         objGeneric.setContent(objTiendaCentroComercial);
 
-                        if (objTiendaCentroComercialcControlador.actualizar(codigoActualizar,
-                                objGeneric.getContent())) {
+                        if (objTiendaCentroComercialcControlador.actualizar(codigoActualizar,objGeneric.getContent())) {
                             System.out.println("la tienda en centro comercial se actualizo correctamente");
                         } else {
                             System.out.println("la tienda no se encontro. verifique!!");
