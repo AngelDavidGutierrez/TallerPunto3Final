@@ -48,7 +48,7 @@ public class vistaTallerPunto3Final {
             System.out.println("\n Ingresa tienda en centro comercial");
             System.out.println("Ingrese codigo");
             String codigo = scan.nextLine();
-            System.out.println("Ingrese la dirección");
+            System.out.println("Ingrese la direccion");
             String direccion = scan.nextLine();
             System.out.println("Ingrese el telefono");
             String telefono = scan.nextLine();
@@ -69,11 +69,11 @@ public class vistaTallerPunto3Final {
             objGeneric.setContent(objTiendaCentroComercial);
 
             if (objTiendaCentroComercialcControlador.registrar(objGeneric.getContent())) {
-                System.out.println("la tienda en centro copmercial se registro correctamente");
+                System.out.println("la tienda en centro comercial se registro correctamente");
             } else {
-                System.out.println("error no se pudo registrar, intente nueva mente ");
+                System.out.println("error no se pudo registrar, intente nuevamente ");
             }
-            System.out.println("desea registrar otra tienda?");
+            System.out.println("desea registrar otra tienda? (s/n)");
             sw = scan.nextLine().toUpperCase().charAt(0);
         } while (sw == 'S');
 
@@ -94,7 +94,7 @@ public class vistaTallerPunto3Final {
                 System.out.println("la tienda no se encontro. verifique!!");
             }
 
-            System.out.println("desea consultar otra tienda?");
+            System.out.println("desea consultar otra tienda? (s/n)");
             sw = scan.nextLine().toUpperCase().charAt(0);
         } while (sw == 'S');
     }
@@ -114,24 +114,24 @@ public class vistaTallerPunto3Final {
                     System.out.println("\nDatos del tienda ");
                     System.out.println(resultado);
 
-                    System.out.println("Desea actualizar la tienda?");
+                    System.out.println("Desea actualizar la tienda? (s/n)");
                     sw = scan.nextLine().toUpperCase().charAt(0);
 
                     if (sw == 'S') {
                         System.out.println("Ingrese codigo");
                         String codigo = scan.nextLine();
-                        System.out.println("Ingrese la dirección");
+                        System.out.println("Ingrese la direccion");
                         String direccion = scan.nextLine();
-                        System.out.println("Ingre el telefono");
+                        System.out.println("Ingrese el telefono");
                         String telefono = scan.nextLine();
                         System.out.println("Ingrese el area del establecimiento");
                         int area = scan.nextInt(); scan.nextLine();
                         String presupuesto = objTiendaCentroComercialcControlador.presupuesto(area);
-                        System.out.println("Ingrese el nombre del alministrador ");
+                        System.out.println("Ingrese el nombre del administrador ");
                         String administrador = scan.nextLine();
                         System.out.println("Ingrese numero de empleados que trabajan");
                         String numeroEmpleados = scan.nextLine();
-                        System.out.println("Ingrese la linea de ropoa con mas ventas ");
+                        System.out.println("Ingrese la linea de ropa con mas ventas ");
                         String lienaRopa = scan.nextLine();
 
                         TiendaCentroComercial objTiendaCentroComercial = new TiendaCentroComercial(codigo, direccion,
@@ -140,7 +140,8 @@ public class vistaTallerPunto3Final {
                         Generic<TiendaCentroComercial> objGeneric = new Generic<>();
                         objGeneric.setContent(objTiendaCentroComercial);
 
-                        if (objTiendaCentroComercialcControlador.actualizar(codigoActualizar,objGeneric.getContent())) {
+                        if (objTiendaCentroComercialcControlador.actualizar(codigoActualizar,
+                                objGeneric.getContent())) {
                             System.out.println("la tienda en centro comercial se actualizo correctamente");
                         } else {
                             System.out.println("la tienda no se encontro. verifique!!");
@@ -156,7 +157,7 @@ public class vistaTallerPunto3Final {
                 System.out.println("la tienda no se encontro. verifique!!");
             }
 
-            System.out.println("desea actualizar otra tienda?");
+            System.out.println("desea actualizar otra tienda? (s/n)");
             sw = scan.nextLine().toUpperCase().charAt(0);
         } while (sw == 'S');
     }
@@ -175,7 +176,7 @@ public class vistaTallerPunto3Final {
                     System.out.println("\nDatos del tienda ");
                     System.out.println(resultado);
 
-                    System.out.println("Desea eliminar la tienda?");
+                    System.out.println("Desea eliminar la tienda? (s/n)");
                     sw = scan.nextLine().toUpperCase().charAt(0);
 
                     if (sw == 'S') {
@@ -196,7 +197,7 @@ public class vistaTallerPunto3Final {
                 System.out.println("la tienda no se encontro. verifique!!");
             }
 
-            System.out.println("desea eliminar otra tienda?");
+            System.out.println("desea eliminar otra tienda? (s/n)");
             sw = scan.nextLine().toUpperCase().charAt(0);
         } while (sw == 'S');
     }
@@ -245,7 +246,7 @@ public class vistaTallerPunto3Final {
             } else {
                 System.out.println("El Punto de Fabrica no se pudo registrar.");
             }
-            System.out.println("Desea registrar otro Punto de Fabrica?");
+            System.out.println("Desea registrar otro Punto de Fabrica? (s/n)");
             sw = scan.nextLine().toUpperCase().charAt(0);
         } while (sw == 'S');
 
@@ -255,7 +256,7 @@ public class vistaTallerPunto3Final {
         char sw;
         do {
             System.out.println("Ingrese el Punto de Fabrica que desea consultar: ");
-            System.out.println("Ingrese Codido del Punto de Fabrica: ");
+            System.out.println("Ingrese Codigo del Punto de Fabrica: ");
             String codigo = scan.nextLine();
             String resultado = objPuntoFabricaControlador.consultar(codigo);
             if (resultado != "") {
@@ -264,7 +265,7 @@ public class vistaTallerPunto3Final {
             } else {
                 System.out.println("El Punto de Fabrica no se encontro.");
             }
-            System.out.println("Desea consultar otro Punto de Fabrica?");
+            System.out.println("Desea consultar otro Punto de Fabrica? (s/n)");
             sw = scan.nextLine().toUpperCase().charAt(0);
         } while (sw == 'S');
     }
@@ -284,7 +285,7 @@ public class vistaTallerPunto3Final {
                     System.out.println("Datos del Punto Fabrica");
                     System.out.println(resultado);
 
-                    System.out.println("Desea actualizar el Punto de Fabrica?");
+                    System.out.println("Desea actualizar el Punto de Fabrica? (s/n)");
 
                     sw = scan.nextLine().toUpperCase().charAt(0);
 
@@ -324,7 +325,7 @@ public class vistaTallerPunto3Final {
             } else {
                 System.out.println("No se encontro el Punto de Fabrica.");
             }
-            System.out.println("Desea actualizar otro Punto de Fabrica?");
+            System.out.println("Desea actualizar otro Punto de Fabrica? (s/n)");
             sw = scan.nextLine().toUpperCase().charAt(0);
         } while (sw == 'S');
     }
@@ -343,7 +344,7 @@ public class vistaTallerPunto3Final {
                     System.out.println("Datos del Punto Fabrica");
                     System.out.println(resultado);
 
-                    System.out.println("Desea Eliminar el Punto de Fabrica?");
+                    System.out.println("Desea Eliminar el Punto de Fabrica? (s/n)");
 
                     sw = scan.nextLine().toUpperCase().charAt(0);
 
@@ -364,14 +365,14 @@ public class vistaTallerPunto3Final {
             } else {
                 System.out.println("No se encontro el Punto de Fabrica.");
             }
-            System.out.println("Desea Eliminar otro Punto de Fabrica?");
+            System.out.println("Desea Eliminar otro Punto de Fabrica? (s/n)");
             sw = scan.nextLine().toUpperCase().charAt(0);
         } while (sw == 'S');
 
     }
 
     public static void listaPuntoFabrica() {
-        System.out.println("Lista de Putos Fabricas.");
+        System.out.println("Lista de Puntos Fabricas.");
 
         String resultado = objPuntoFabricaControlador.listar();
 
@@ -408,7 +409,7 @@ public class vistaTallerPunto3Final {
             } else {
                 System.out.println("El Almacen Cadena no se pudo registrar.");
             }
-            System.out.println("Desea registrar otro Almacen de Cadena?");
+            System.out.println("Desea registrar otro Almacen de Cadena? (s/n)");
             sw = scan.nextLine().toUpperCase().charAt(0);
         } while (sw == 'S');
 
@@ -419,7 +420,7 @@ public class vistaTallerPunto3Final {
         char sw;
         do {
             System.out.println("Ingrese el Almacen Cadena que desea consultar: ");
-            System.out.println("Ingrese Codido del Almacen Cadena: ");
+            System.out.println("Ingrese Codigo del Almacen Cadena: ");
             String codigo = scan.nextLine();
             String resultado = objAlmacenCadenaControlador.consultar(codigo);
             if (resultado != "") {
@@ -428,7 +429,7 @@ public class vistaTallerPunto3Final {
             } else {
                 System.out.println("El Almacen Cadena no se encontro.");
             }
-            System.out.println("Desea consultar otro Almacen Cadena?");
+            System.out.println("Desea consultar otro Almacen Cadena? (s/n)");
             sw = scan.nextLine().toUpperCase().charAt(0);
         } while (sw == 'S');
     }
@@ -448,7 +449,7 @@ public class vistaTallerPunto3Final {
                     System.out.println("Datos del Almacen Cadena");
                     System.out.println(resultado);
 
-                    System.out.println("Desea actualizar el Almacen Cadena?");
+                    System.out.println("Desea actualizar el Almacen Cadena? (s/n)");
 
                     sw = scan.nextLine().toUpperCase().charAt(0);
 
@@ -484,7 +485,7 @@ public class vistaTallerPunto3Final {
             } else {
                 System.out.println("No se encontro el Almacen Cadena.");
             }
-            System.out.println("Desea actualizar otro Almacen Cadena?");
+            System.out.println("Desea actualizar otro Almacen Cadena? (s/n)");
             sw = scan.nextLine().toUpperCase().charAt(0);
         } while (sw == 'S');
     }
@@ -503,7 +504,7 @@ public class vistaTallerPunto3Final {
                     System.out.println("Datos del Almacen Cadena");
                     System.out.println(resultado);
 
-                    System.out.println("Desea Eliminar el Almacen Cadena?");
+                    System.out.println("Desea Eliminar el Almacen Cadena? (s/n)");
 
                     sw = scan.nextLine().toUpperCase().charAt(0);
 
@@ -524,7 +525,7 @@ public class vistaTallerPunto3Final {
             } else {
                 System.out.println("No se encontro el Almacen Cadena.");
             }
-            System.out.println("Desea Eliminar otro Almacen Cadena?");
+            System.out.println("Desea Eliminar otro Almacen Cadena? (s/n)");
             sw = scan.nextLine().toUpperCase().charAt(0);
         } while (sw == 'S');
 
