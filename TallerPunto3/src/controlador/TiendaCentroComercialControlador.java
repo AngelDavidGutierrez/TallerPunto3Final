@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
 
-    private final ArrayList <TiendaCentroComercial> listTiendaCentroComercial = new ArrayList<>();
+    private final ArrayList<TiendaCentroComercial> listTiendaCentroComercial = new ArrayList<>();
 
     @Override
     public <T> boolean actualizar(String codigo, T obj) {
@@ -18,7 +18,7 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
             } else {
                 TiendaCentroComercial objTiendaCentroComercial = (TiendaCentroComercial) obj;
                 for (TiendaCentroComercial objtTiendaCentroComercial : this.listTiendaCentroComercial) {
-                    if (objtTiendaCentroComercial.getCodigo().equals(codigo)){
+                    if (objtTiendaCentroComercial.getCodigo().equals(codigo)) {
                         objtTiendaCentroComercial.setAdministrador(objTiendaCentroComercial.getAdministrador());
                         objtTiendaCentroComercial.setNumeroEmpleados(objTiendaCentroComercial.getNumeroEmpleados());
                         objtTiendaCentroComercial.setDiteccion(objTiendaCentroComercial.getDiteccion());
@@ -41,14 +41,15 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
 
         for (int i = 0; i < this.listTiendaCentroComercial.size(); i++) {
             if (this.listTiendaCentroComercial.get(i).getCodigo().equals(codigo)) {
-                result = "Codigo: " + this.listTiendaCentroComercial.get(i).getCodigo()+ " - "
-                        + "Direccion: "+this.listTiendaCentroComercial.get(i).getDiteccion()+ " - "
-                        + "Telefono: " + this.listTiendaCentroComercial.get(i).getTelefono()+ " - "
-                        + "Area: " + this.listTiendaCentroComercial.get(i).getArea()+ " - "
-                        + "Administrador: "+this.listTiendaCentroComercial.get(i).getAdministrador()+ " - "
-                        + "Empleados: " + this.listTiendaCentroComercial.get(i).getNumeroEmpleados()+ " - "
-                        + "Linea de ropa mas vendida: " + this.listTiendaCentroComercial.get(i).getLineaRopa()+ " - "
-                        + "Presupuesto de venta: " + this.listTiendaCentroComercial.get(i).getPresupuestoVentas()+ "\n";
+                result = "Codigo: " + this.listTiendaCentroComercial.get(i).getCodigo() + " - "
+                        + "Direccion: " + this.listTiendaCentroComercial.get(i).getDiteccion() + " - "
+                        + "Telefono: " + this.listTiendaCentroComercial.get(i).getTelefono() + " - "
+                        + "Area: " + this.listTiendaCentroComercial.get(i).getArea() + " - "
+                        + "Administrador: " + this.listTiendaCentroComercial.get(i).getAdministrador() + " - "
+                        + "Empleados: " + this.listTiendaCentroComercial.get(i).getNumeroEmpleados() + " - "
+                        + "Linea de ropa mas vendida: " + this.listTiendaCentroComercial.get(i).getLineaRopa() + " - "
+                        + "Presupuesto de venta: " + this.listTiendaCentroComercial.get(i).getPresupuestoVentas()
+                        + "\n";
 
                 break;
             }
@@ -58,7 +59,7 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
 
     @Override
     public boolean eliminar(String codigo) {
-       boolean result = true;
+        boolean result = true;
         try {
             if (codigo == null) {
                 result = false;
@@ -82,15 +83,15 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
         String lisTiendaCentroComercial = "";
 
         for (int i = 0; i < this.listTiendaCentroComercial.size(); i++) {
-            
-            lisTiendaCentroComercial += "Codigo: "+this.listTiendaCentroComercial.get(i).getCodigo()+ " - "
-                    + "Administrador: " + this.listTiendaCentroComercial.get(i).getAdministrador()+ " - "
-                    + "Empleados: " + this.listTiendaCentroComercial.get(i).getNumeroEmpleados()+ " - "
-                    + "Direccion: " + this.listTiendaCentroComercial.get(i).getDiteccion()+ " - "
-                    + "Telefono:" + this.listTiendaCentroComercial.get(i).getTelefono()+ " - "
-                    + "Area: " + this.listTiendaCentroComercial.get(i).getArea()+ " - "
-                    + "Linea de ropa mas vendida: " + this.listTiendaCentroComercial.get(i).getLineaRopa()+ " - "
-                    + "Presupuesto de venta: " + this.listTiendaCentroComercial.get(i).getPresupuestoVentas()+ "\n";
+
+            lisTiendaCentroComercial += "Codigo: " + this.listTiendaCentroComercial.get(i).getCodigo() + " - "
+                    + "Administrador: " + this.listTiendaCentroComercial.get(i).getAdministrador() + " - "
+                    + "Empleados: " + this.listTiendaCentroComercial.get(i).getNumeroEmpleados() + " - "
+                    + "Direccion: " + this.listTiendaCentroComercial.get(i).getDiteccion() + " - "
+                    + "Telefono:" + this.listTiendaCentroComercial.get(i).getTelefono() + " - "
+                    + "Area: " + this.listTiendaCentroComercial.get(i).getArea() + " - "
+                    + "Linea de ropa mas vendida: " + this.listTiendaCentroComercial.get(i).getLineaRopa() + " - "
+                    + "Presupuesto de venta: " + this.listTiendaCentroComercial.get(i).getPresupuestoVentas() + "\n";
         }
         return lisTiendaCentroComercial;
     }
@@ -98,7 +99,7 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
     @Override
     public <T> boolean registrar(T obj) {
         try {
-            if (obj =="") {
+            if (obj == "") {
                 return false;
             } else {
                 TiendaCentroComercial objtTiendaCentroComercial = (TiendaCentroComercial) obj;
@@ -106,13 +107,11 @@ public class TiendaCentroComercialControlador extends PuntoDeVentaControlador {
 
                 return true;
             }
-           
+
         } catch (Exception e) {
 
             return false;
         }
     }
 
-   
 }
-
