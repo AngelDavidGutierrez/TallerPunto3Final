@@ -18,26 +18,126 @@ public class VistaTallerPunto3Final {
     private static AlmacenCadenaControlador objAlmacenCadenaControlador = new AlmacenCadenaControlador();
 
     public static void main(String[] args) {
+
+        int respu;
+        int respu2;
+        char w;
         // aqui se llaman las funciones
+        do {
+            
+            System.out.println("Selecione la funcionalidad que quiere hacer "
+                + "\nSeleciona 1, 2, 3, 4, 5 "
+                + "\n1 - registar:"
+                + "\n2 - consultar:"
+                + "\n3 - actualizar:"
+                + "\n4 - Eliminar"
+                + "\n5 - lista");
+        respu = scan.nextInt();
+        scan.nextLine();
+
+        System.out.println("Selecione el punto de venta"
+                + "\nSeleciona 1, 2, 3"
+                + "\n1 - Tienda centro comerial"
+                + "\n2 - Punto fabrica"
+                + "\n3 - Almacen Cadena");
+        respu2 = scan.nextInt();
+        scan.nextLine();
+
+        switch (respu) {
+            case 1:
+                switch (respu2) {
+                    case 1:
+                        registrarTiendaCentroComercial();
+                        break;
+                    case 2:
+                        registrarPuntoFabrica();
+                        break;
+                    case 3:
+                        registrarAlmacenCadena();
+                        break;
+                    default:
+                        System.out.println("Ingresa un valor valido");
+                        break;
+                }
+                break;
+            case 2:
+                switch (respu2) {
+                    case 1:
+                        consultarTiendaCentroComercial();
+                        break;
+                    case 2:
+                        consultarPuntoFabrica();
+                        break;
+                    case 3:
+                        consultarAlmacenCadena();
+                        break;
+                    default:
+                        System.out.println("Ingresa un valor valido");
+                        break;
+                }
+                break;
+            case 3:
+                switch (respu2) {
+                    case 1:
+                        actualizarTiendaCentroComercial();
+                        break;
+                    case 2:
+                        actualizarPuntoFabrica();
+                        break;
+                    case 3:
+                        actualizarAlmacenCadena();
+                        break;
+                    default:
+                        System.out.println("Ingresa un valor valido");
+                        break;
+                }
+                break;
+            case 4:
+                switch (respu2) {
+                    case 1:
+                        eliminarTiendaCentroComercial();
+                        break;
+                    case 2:
+                        eliminarPuntoFabrica();
+                        break;
+                    case 3:
+                        eliminarAlmacenCadena();
+                        break;
+                    default:
+                        System.out.println("Ingresa un valor valido");
+                        break;
+                }
+                break;
+            case 5:
+                switch (respu2) {
+                    case 1:
+                        listaTiendaCentroComercial();
+                        break;
+                    case 2:
+                        listaPuntoFabrica();
+                        break;
+                    case 3:
+                        listaAlmacenCadena();
+                        break;
+                    default:
+                        System.out.println("Ingresa un valor valido");
+                        break;
+                }
+                break;
+            default:
+            System.out.println("Ingresa un valor valido");
+                break;
+        }
+            System.out.println("desea hacer algo adicional?");
+            w = scan.nextLine().toUpperCase().charAt(0);
+        } while (w == 'S');
 
         // Tienda centro comercial
-        registrarTiendaCentroComercial();
-        consultarTiendaCentroComercial();
-        actualizarTiendaCentroComercial();
-        eliminarTiendaCentroComercial();
-        listaTiendaCentroComercial();
+
         // punto fabrica
-        registrarPuntoFabrica();
-        consultarPuntoFabrica();
-        actualizarPuntoFabrica();
-        eliminarPuntoFabrica();
-        listaPuntoFabrica();
+
         // Almacen Cadena
-        registrarAlmacenCadena();
-        consultarAlmacenCadena();
-        actualizarAlmacenCadena();
-        eliminarAlmacenCadena();
-        listaAlmacenCadena();
+
     }
 
     // apartir de aca se crean las funcionalidades
@@ -53,7 +153,8 @@ public class VistaTallerPunto3Final {
             System.out.println("Ingrese el telefono");
             String telefono = scan.nextLine();
             System.out.println("Ingrese el area del establecimiento");
-            int area = scan.nextInt(); scan.nextLine();
+            int area = scan.nextInt();
+            scan.nextLine();
             String presupuesto = objTiendaCentroComercialcControlador.presupuesto(area);
             System.out.println("Ingrese el nombre del alministrador ");
             String administrador = scan.nextLine();
@@ -123,7 +224,8 @@ public class VistaTallerPunto3Final {
                         System.out.println("Ingrese el telefono");
                         String telefono = scan.nextLine();
                         System.out.println("Ingrese el area del establecimiento");
-                        int area = scan.nextInt(); scan.nextLine();
+                        int area = scan.nextInt();
+                        scan.nextLine();
                         String presupuesto = objTiendaCentroComercialcControlador.presupuesto(area);
                         System.out.println("Ingrese el nombre del administrador ");
                         String administrador = scan.nextLine();
@@ -132,7 +234,8 @@ public class VistaTallerPunto3Final {
                         System.out.println("Ingrese la linea de ropa con mas ventas ");
                         String lienaRopa = scan.nextLine();
 
-                        TiendaCentroComercial objTiendaCentroComercial = new TiendaCentroComercial(codigoActualizar, direccion,
+                        TiendaCentroComercial objTiendaCentroComercial = new TiendaCentroComercial(codigoActualizar,
+                                direccion,
                                 telefono, area, presupuesto, administrador, numeroEmpleados, lienaRopa);
 
                         Generic<TiendaCentroComercial> objGeneric = new Generic<>();
@@ -226,7 +329,8 @@ public class VistaTallerPunto3Final {
             System.out.println("Ingrese el numero de telefono: ");
             String telefono = scan.nextLine();
             System.out.println("ingrese el area: ");
-            int area = scan.nextInt(); scan.nextLine();
+            int area = scan.nextInt();
+            scan.nextLine();
             String presupuesto = objPuntoFabricaControlador.presupuesto(area);
             System.out.println("Ingrese el nombre del administrador: ");
             String administrador = scan.nextLine();
@@ -293,14 +397,16 @@ public class VistaTallerPunto3Final {
                         System.out.println("Ingrese el numero de telefono: ");
                         String telefono = scan.nextLine();
                         System.out.println("ingrese el area: ");
-                        int area = scan.nextInt(); scan.nextLine();
+                        int area = scan.nextInt();
+                        scan.nextLine();
                         String presupuesto = objPuntoFabricaControlador.presupuesto(area);
                         System.out.println("Ingrese el nombre del administrador: ");
                         String administrador = scan.nextLine();
                         System.out.println("Ingrese el numero de Empleados: ");
                         String empleados = scan.nextLine();
 
-                        PuntoFabrica objPuntoFabrica = new PuntoFabrica(codigoActualizar, direccion, telefono, area, presupuesto,
+                        PuntoFabrica objPuntoFabrica = new PuntoFabrica(codigoActualizar, direccion, telefono, area,
+                                presupuesto,
                                 administrador, empleados);
 
                         Generic<PuntoFabrica> objGeneric = new Generic<>();
@@ -392,7 +498,8 @@ public class VistaTallerPunto3Final {
             System.out.println("Ingrese el numero de telefono: ");
             String telefono = scan.nextLine();
             System.out.println("ingrese el area: ");
-            int area = scan.nextInt();scan.nextLine();
+            int area = scan.nextInt();
+            scan.nextLine();
             String presupuesto = objAlmacenCadenaControlador.presupuesto(area);
 
             AlmacenCadena objAlmacenCadena = new AlmacenCadena(codigo, direccion, telefono, area, presupuesto);
@@ -455,7 +562,8 @@ public class VistaTallerPunto3Final {
                         System.out.println("Ingrese el numero de telefono: ");
                         String telefono = scan.nextLine();
                         System.out.println("ingrese el area: ");
-                        int area = scan.nextInt();scan.nextLine();
+                        int area = scan.nextInt();
+                        scan.nextLine();
                         String presupuesto = objAlmacenCadenaControlador.presupuesto(area);
 
                         AlmacenCadena objAlmacenCadena = new AlmacenCadena(codigoActualizar, direccion, telefono, area,
