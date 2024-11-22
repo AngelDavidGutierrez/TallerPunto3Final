@@ -28,8 +28,8 @@ public class AlmacenCadenaControlador extends PuntoDeVentaControlador {
 
         for (int i = 0; i < this.listAlmacenCadena.size(); i++) {
             if (this.listAlmacenCadena.get(i).getCodigo().equals(codigo)) {
-                result = this.listAlmacenCadena.get(i).getCodigo()+ " - "
-                        + this.listAlmacenCadena.get(i).getTelefono() + " - "
+                result = "Codigo: "+this.listAlmacenCadena.get(i).getCodigo()+ " - "
+                        + "Telefono: " + this.listAlmacenCadena.get(i).getTelefono() + " - "
                         + this.listAlmacenCadena.get(i).getArea()+ " - "
                         + this.listAlmacenCadena.get(i).getDiteccion()+ " - "
                         + this.listAlmacenCadena.get(i).getPresupuestoVentas();
