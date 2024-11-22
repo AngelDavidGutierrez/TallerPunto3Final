@@ -28,11 +28,11 @@ public class AlmacenCadenaControlador extends PuntoDeVentaControlador {
 
         for (int i = 0; i < this.listAlmacenCadena.size(); i++) {
             if (this.listAlmacenCadena.get(i).getCodigo().equals(codigo)) {
-                result = "Codigo: "+this.listAlmacenCadena.get(i).getCodigo()+ " - "
-                        + "Telefono: " + this.listAlmacenCadena.get(i).getTelefono() + " - "
-                        + this.listAlmacenCadena.get(i).getArea()+ " - "
-                        + this.listAlmacenCadena.get(i).getDiteccion()+ " - "
-                        + this.listAlmacenCadena.get(i).getPresupuestoVentas();
+                result = "Codigo: " + this.listAlmacenCadena.get(i).getCodigo()+ " - "
+                        + "Telefono: " + this.listAlmacenCadena.get(i).getTelefono()+ " - "
+                        + "Area: " + this.listAlmacenCadena.get(i).getArea()+ " - "
+                        + "Direccion:" + this.listAlmacenCadena.get(i).getDiteccion()+ " - "
+                        + "Presupuesto de venta: " + this.listAlmacenCadena.get(i).getPresupuestoVentas()+ "\n";
 
                 break;
             }
@@ -91,13 +91,12 @@ public class AlmacenCadenaControlador extends PuntoDeVentaControlador {
 
         for (int i = 0; i < this.listAlmacenCadena.size(); i++) {
             
-            lisAlmacenCadena += this.listAlmacenCadena.get(i).getCodigo() + " - "
-                    + this.listAlmacenCadena.get(i).getTelefono()+ " - "
-                    + this.listAlmacenCadena.get(i).getArea()+ " - "
-                    + this.listAlmacenCadena.get(i).getDiteccion() + " - "
-                    + this.listAlmacenCadena.get(i).getPresupuestoVentas() + " \n ";
+            lisAlmacenCadena += "Codigo: " + this.listAlmacenCadena.get(i).getCodigo()+ " - "
+                    + "Telefono: " + this.listAlmacenCadena.get(i).getTelefono()+ " - "
+                    + "Area: " + this.listAlmacenCadena.get(i).getArea()+ " - "
+                    + "Direccion: " + this.listAlmacenCadena.get(i).getDiteccion()+ " - " 
+                    + "Presupuesto de venta: " + this.listAlmacenCadena.get(i).getPresupuestoVentas()+ "\n";
         }
         return lisAlmacenCadena;
     }
 }
-
